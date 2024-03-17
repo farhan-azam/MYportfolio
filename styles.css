@@ -1,0 +1,137 @@
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+
+}
+
+html{
+    font-size: 63%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/*Header*/
+
+header{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:transparent;
+    padding:1rem 7%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    z-index: 200;
+    
+}
+
+
+header .logo{
+    font-size: 6rem;
+    font-family: "Homemade Apple", cursive;
+    font-weight: 900;
+    font-style: bold;
+    color: rgb(10, 10, 10);
+}
+
+
+header .navbar a{
+    font-size: 3rem;
+    font-family: "Homemade Apple", cursive;
+    font-weight: 700;
+    font-style: normal;
+    padding: 4rem 1rem;
+    margin-left: 50px;
+    color:rgb(73, 8, 8);
+    border:.1rem solid transparent;
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color: #7e0c0c;
+    border:.1rem solid rgba(205,17-,124,0.2);
+}
+
+header .icons i{
+    cursor: pointer;
+    margin-left: 0.5em;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    background: var(--light-color);
+    text-align: center;
+    font-size: 1.7rem;
+    color:#fff;
+    border-radius:20px;
+    
+}
+
+header .icons i:hover{
+    color:#fff;
+    background: var(--light-color);
+    transform: rotate(360deg);
+
+}
+
+header .icons #menu
+{
+  display: none;
+}
+
+/*hero*/
+
+.hero {
+    background-image: url('assets/starrynights.jpg');
+    opacity: 80%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:768px)
+{
+    
+    header .icons #menu
+    {
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ab0d0d;
+        border-top: 1rem solid rgba(205, 170, 124, 0.2);
+        border-bottom:1rem solid rgba(205, 170, 124, 0.2);
+        padding: 1rem;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+
+    }
+    header .navbar.active{
+         clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--black);
+       }
+
+    }
