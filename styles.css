@@ -97,6 +97,8 @@ header .icons #menu
 
 
 /*hero*/
+
+
 hero {
     position: relative;
     display:inline-block   
@@ -121,6 +123,8 @@ hero img{
 }
 
 /*about*/
+
+
 .about{
     background-color: #1d4e89;
     padding: 10px;
@@ -166,8 +170,31 @@ hero img{
     font-weight: 400;
     font-style: normal;
 }
+.about .skills{
+    overflow: hidden;
+    background-color: rgb(132, 203, 132);
+    margin-left: 20px;
 
+}
+.about .skills h3{
+    font-size: 5rem;
+    color: rgb(206, 32, 32);
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 600;
+    font-style: normal;
+    animation: moveText 15s linear infinite; 
+    white-space: nowrap;  
+    position: relative;   
+    left: 100%;  }
 
+@keyframes moveText {
+    0% {
+        left: 100%;        
+      }
+      100% {
+        left: -100%;        
+  }
+}
 
 
 @media(max-width:768px)
@@ -228,8 +255,17 @@ hero img{
         line-height: 30px;
        
     }
+    .about .skills{
+        margin-left: 2px;
+    }
+    .about .skills h3{
+        font-size: 2rem;
+    }
     }
     @media(max-width:455px){
+        header .logo{
+            font-size: 2rem;
+        }
         .about{
             justify-content: center;
             padding: 2px;
