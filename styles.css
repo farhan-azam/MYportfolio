@@ -1,14 +1,11 @@
 
 *{
-    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-    text-transform: capitalize;
     transition: all 0.2s linear;
-
 }
 
 html{
@@ -17,70 +14,79 @@ html{
     scroll-behavior: smooth;
 }
 
-/*Header*/
+/*HEADER*/
 
 header{
-    
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
-    background:transparent;
-    padding:1rem 7%;
+    background:url('assets/vangogh.jpg');
+    padding:1rem 6%;
     display:flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
-    box-shadow: var(--box-shadow);
     z-index: 200;
+    border-bottom: 8px solid #02172b;
     
 }
 
-
 header .logo{
-    font-size: 3rem;
-    font-family: "Homemade Apple", cursive;
-    font-weight: 900;
-    font-style: bold;
-    color: rgb(10, 10, 10);
-}
-
-
-header .navbar a{
-    margin-left: 1170px;
-    font-size: 3rem;
+    color:white;
+    font-size: 4rem;
+    opacity: 0;
+    transform: translateY(50px); 
+    animation: slideUp 1s ease-in-out forwards;
+    text-shadow: 3px 3px 6px rgba(11, 10, 10, 0.5);
     font-family: "Homemade Apple", cursive;
     font-weight: 700;
     font-style: normal;
-    padding: 4rem 1rem;
-    margin-left: 50px;
-    color:rgb(73, 8, 8);
+
+}
+@keyframes slideUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+  }
+header .logo img{
+  height: auto;
+}
+header .navbar a{
+
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(215, 29, 29, 0.5);
+    font-family: "Homemade Apple", cursive;
+    font-weight: 400;
+    font-style: normal; 
+    padding: 5rem 2rem;
+    color:wheat;
     border:.1rem solid transparent;
 }
 
 header .navbar a.active,
 header .navbar a:hover{
-    color: #7e0c0c;
-    border:.1rem solid rgba(205,17-,124,0.2);
+    color:red;
 }
 
 header .icons i{
     cursor: pointer;
     margin-left: 0.5em;
-    height: 6rem;
-    width: 6rem;
+    height: 4.5rem;
+    width: 4.5rem;
     line-height: 4.5rem;
-    background: var(--light-color);
+    background:transparent;
     text-align: center;
-    font-size: 3rem;
-    color:#af0c0c;
+    font-size: 1.7rem;
+    color:#fff;
     border-radius:20px;
     
 }
 
 header .icons i:hover{
     color:#fff;
-    background: var(--light-color);
-    transform: rotate(360deg);
+    background: transparent;
+
 
 }
 
@@ -89,45 +95,103 @@ header .icons #menu
   display: none;
 }
 
-/*hero*/
 
-.hero {
-    background-image: url('assets/starrynights.jpg');
-    opacity: 80%;
-    width: 100%; 
-    height: 400px;
-    background-image: url('path/to/your/image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    
+/*hero*/
+hero {
+    position: relative;
+    display:inline-block   
+}
+hero h1{
    
-    align-items: center;
+   font-size: 12rem;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   z-index: 2;
+   text-align: center;
+   color:rgb(239, 233, 233);
+   text-shadow: 4px blue;
+   
 }
-.hero h1{
-    font-size: 12rem;
-    position: absolute;
-    bottom: 0;
-    left: 3px;
+
+
+hero img{
+    width: 100vw;
+    
 }
+
+/*about*/
+.about{
+    background-color: #1d4e89;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.about .image img{
+    margin-top: 100px;
+    width: 25vw;
+    animation: floatAnimation 5s ease-in-out infinite;
+}
+@keyframes floatAnimation {
+    0% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-30px); 
+    }
+    100% {
+      transform: translateY(0); 
+    }
+  }
+.about .text{
+    width: 60vw;
+    margin-top:50px;
+    margin-left: 65px;
+    padding: 10px;
+    line-height: 50px;
+   
+}
+.about h1{
+    font-size: 8rem;
+    color: rgb(243, 20, 20);
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.about h2{
+    font-size: 4rem;
+    color: white;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
 
 @media(max-width:768px)
-{
-    
+{   
+    header .logo{
+        font-size:3rem;
+    }
+    header .logo img{
+        height: 7rem;
+
+    }
     header .icons #menu
     {
         display: inline-block;
     }
     header .navbar{
-
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background:blue;
-        border-top: 1rem solid rgba(205, 170, 124, 0.2);
-        border-bottom:1rem solid rgba(205, 170, 124, 0.2);
+        background:rgb(44, 26, 61);
+        opacity: 90%;
+        border-top: 1rem rgb(231, 201, 201);
+        border-bottom:1rem rgb(234, 208, 208);
         padding: 1rem;
         clip-path: polygon(0 0,100% 0,100% 0,0 0);
 
@@ -140,11 +204,53 @@ header .icons #menu
         padding: 1.5rem;
         margin: 1rem;
         font-size: 2rem;
-        background: var(--black);
+        background:transparent;
        }
-    
-    .hero h1{
+    hero h1{
+        font-size: 5rem;
+    }
+    .about .image img{
+        margin-top: 100px;
+        width:20vw;
+    }
+    .about h1{
+        font-size: 6rem;
+
+    }
+    .about h2{
         font-size: 3rem;
     }
+    .about .text{
+        width: 60vw;
+        margin-top:25px;
+        margin-left: 70px;
+        padding: 5px;
+        line-height: 30px;
+       
+    }
+    }
+    @media(max-width:455px){
+        .about{
+            justify-content: center;
+            padding: 2px;
+            margin: 2px;
+        }
+
+        .about .image img{
+            width: 50vw;
+            margin-top: 20px;
+        }
+        .about .text{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            border: #fff;
+        }
+        .about .text h1{
+            font-size: 3rem;
+        }
+        .about .text h2{
+            font-size: 2rem;
+        }
 
     }
