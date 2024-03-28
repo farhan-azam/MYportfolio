@@ -209,6 +209,7 @@ hero img{
 }
 
 .embedded-iframe {
+    background-color: white;
     width: 70%;
     height:500px;  
     border: none;
