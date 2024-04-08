@@ -1,2 +1,2 @@
 Portfolio
-THis is my portfolio that i have built in html . css and javascript
+This is my portfolio that I have built in html, css and javascript. I am a web developer .
