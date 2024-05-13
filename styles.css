@@ -127,6 +127,8 @@ hero h1{
 hero img{
     width: 100vw;
     
+    
+    
 }
 
 
@@ -144,6 +146,8 @@ hero img{
     margin-top: 100px;
     width: 25vw;
     animation: floatAnimation 5s ease-in-out infinite;
+   
+   
 }
 @keyframes floatAnimation {
     0% {
